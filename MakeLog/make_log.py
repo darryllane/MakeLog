@@ -6,7 +6,11 @@ class initialise(object):
 	"""
 Logger Class for info, error and debug
 
-defaults: 
+    """	
+	
+	def __init__(self, LOG_DIR='', INFO_LOG_FILE='', ERROR_LOG_FILE='', DEBUG_LOG_FILE=''):
+		"""
+**defaults**
 
 LOG_DIR = '~/log'
 
@@ -16,7 +20,7 @@ ERROR_LOG_FILE = 'LOG_DIR + /error.log'
 
 DEBUG_LOG_FILE = 'LOG_DIR + /debug.log'
 	
-custom:
+**custom**
 
 LOG_DIR = '/User/username/customfolder/log'
 
@@ -25,11 +29,6 @@ INFO_LOG_FILE = 'information_log.log'
 ERROR_LOG_FILE = 'error_log.log'
 
 DEBUG_LOG_FILE = 'debug_log.log'
-    """	
-	
-	def __init__(self, LOG_DIR='', INFO_LOG_FILE='', ERROR_LOG_FILE='', DEBUG_LOG_FILE=''):
-		"""
-		Logger for info, error, and debug
 		
 		"""	
 		if not LOG_DIR:
