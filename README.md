@@ -5,7 +5,7 @@
 **Essentials**
 ---
 [![Python 3.4](https://img.shields.io/badge/python-3.4%20+-green.svg)](https://www.python.org/downloads/release/python-360/) ![GitHub](https://img.shields.io/github/license/darryllane/MakeLog.svg)
-
+---
 Simple logger for info, error and debug logs.
 
 **Testing**
@@ -30,7 +30,8 @@ Simple logger for info, error and debug logs.
     # write debug log
     logger.debug('debug_test')
 
-# **Features!**
+**Features**
+---
 Takes Log directory input (not required)
 
 Takes log filename inputs (not required)
