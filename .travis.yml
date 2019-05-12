@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.7"
+os:
+  - linux
+  
+virtualenv:
+  system_site_packages: true
+  
+install:
+  - pip install --upgrade pip
+  - pip install MakeLog
+
+script:
+  - python -m unittest -v test_makelog
