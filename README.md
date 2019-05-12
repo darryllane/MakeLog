@@ -1,17 +1,19 @@
 # **MakeLog**
-
 ![GitHub issues](https://img.shields.io/github/issues/darryllane/MakeLog.svg)
-[![PyPI version](https://badge.fury.io/py/MakeLog.svg)](https://badge.fury.io/py/MakeLog)
-[![Build Status](https://travis-ci.com/darryllane/MakeLog.svg?branch=master)](https://travis-ci.com/darryllane/MakeLog)
-[![Python 3.4](https://img.shields.io/badge/python-3.4%20+-green.svg)](https://www.python.org/downloads/release/python-360/)
-![GitHub](https://img.shields.io/github/license/darryllane/MakeLog.svg)
+
 
 **Essentials**
 ---
+[![Python 3.4](https://img.shields.io/badge/python-3.4%20+-green.svg)](https://www.python.org/downloads/release/python-360/) ![GitHub](https://img.shields.io/github/license/darryllane/MakeLog.svg)
 Simple logger for info, error and debug logs.
+
+**Testing**
+---
+[![Coverage Status](https://coveralls.io/repos/github/z4r/python-coveralls/badge.svg?branch=master)](https://coveralls.io/github/z4r/python-coveralls?branch=master) [![Build Status](https://travis-ci.org/darryllane/MakeLog.svg?branch=master)](https://travis-ci.org/darryllane/MakeLog)
 
 **Example**
 ---
+
     # import library
     from MakeLog import make_log as log
     
