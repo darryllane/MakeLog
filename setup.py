@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='MakeLog',
-    version='0.6a.dev',
+    version='0.7a.dev',
     author='Darryl lane',
     author_email='DarrylLane101@gmail.com',
     packages=['MakeLog'],
