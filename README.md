@@ -3,7 +3,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/darryllane/MakeLog.svg)
 [![PyPI version](https://badge.fury.io/py/MakeLog.svg)](https://badge.fury.io/py/MakeLog)
 [![Build Status](https://travis-ci.com/darryllane/MakeLog.svg?branch=master)](https://travis-ci.com/darryllane/MakeLog)
-[![Python 3.3](https://img.shields.io/badge/python-3.3%20+-green.svg)](https://www.python.org/downloads/release/python-360/)
+[![Python 3.4](https://img.shields.io/badge/python-3.4%20+-green.svg)](https://www.python.org/downloads/release/python-360/)
 ![GitHub](https://img.shields.io/github/license/darryllane/MakeLog.svg)
 
 **Essentials**
