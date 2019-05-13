@@ -24,8 +24,8 @@ class TestMakeLog(unittest.TestCase):
 		else:
 			return False	
 	
-	def test_error(self):
-		print('\nTesting error log write\n')
+	def test_error_default(self):
+		print('\n\nTesting default error log write')
 		logger = log.initialise()
 		logger.error('error_test')
 		with warnings.catch_warnings():
@@ -34,8 +34,8 @@ class TestMakeLog(unittest.TestCase):
 			successful = self.checkout(self.error)
 			self.assertTrue(successful, True)
 
-	def test_info(self):
-		print('\nTesting info log write\n')
+	def test_info_default(self):
+		print('\n\nTesting default info log write')
 		logger = log.initialise()
 		logger.info('info_test')
 		with warnings.catch_warnings():
@@ -44,8 +44,8 @@ class TestMakeLog(unittest.TestCase):
 			successful = self.checkout(self.info)
 			self.assertTrue(successful, True)
 
-	def test_debug(self):
-		print('\nTesting debug log write\n')
+	def test_debug_default(self):
+		print('\n\nTesting default debug log write')
 		logger = log.initialise()
 		logger.debug('debug_test')
 		with warnings.catch_warnings():
@@ -53,6 +53,38 @@ class TestMakeLog(unittest.TestCase):
 			self.debug = self.read(logger.DEBUG_LOG_FILE)
 			successful = self.checkout(self.debug)
 			self.assertTrue(successful, True)
+			
+
+	def test_error_custom(self):
+		print('\n\nTesting custom error log write')
+		logger = log.initialise(LOG_DIR='~/custom_log/', ERROR_LOG_FILE = 'error_log.log')
+		logger.error('error_test')
+		with warnings.catch_warnings():
+			warnings.simplefilter("ignore")		
+			self.error = self.read(logger.ERROR_LOG_FILE)
+			successful = self.checkout(self.error)
+			self.assertTrue(successful, True)
+
+	def test_info_custom(self):
+		print('\n\nTesting custom info log write')
+		logger = log.initialise(LOG_DIR='~/custom_log/', INFO_LOG_FILE = 'information_log.log')
+		logger.info('info_test')
+		with warnings.catch_warnings():
+			warnings.simplefilter("ignore")		
+			self.info = self.read(logger.INFO_LOG_FILE)		
+			successful = self.checkout(self.info)
+			self.assertTrue(successful, True)
+
+	def test_debug_custom(self):
+		print('\n\nTesting custom debug log write')
+		logger = log.initialise(LOG_DIR='~/custom_log/', DEBUG_LOG_FILE = 'debug_log.log')
+		logger.debug('debug_test')
+		with warnings.catch_warnings():
+			warnings.simplefilter("ignore")		
+			self.debug = self.read(logger.DEBUG_LOG_FILE)
+			successful = self.checkout(self.debug)
+			self.assertTrue(successful, True)
+			
 
 if __name__ == '__main__':
 	unittest.main()

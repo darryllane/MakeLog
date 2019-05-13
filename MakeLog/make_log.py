@@ -33,15 +33,32 @@ DEBUG_LOG_FILE = 'debug_log.log'
 		"""	
 		if not LOG_DIR:
 			LOG_DIR = os.path.expanduser('~/log')
-		
+		else:
+			LOG_DIR = os.path.expanduser(LOG_DIR)
+			
 		if not INFO_LOG_FILE:
 			INFO_LOG_FILE = LOG_DIR + '/info.log'
-
+		else:
+			if not INFO_LOG_FILE.startswith('/'):
+				INFO_LOG_FILE = LOG_DIR + '/' + INFO_LOG_FILE
+			else:
+				INFO_LOG_FILE = LOG_DIR + INFO_LOG_FILE
+				
 		if not ERROR_LOG_FILE:
 			ERROR_LOG_FILE = LOG_DIR + '/error.log'
-			
+		else:
+			if not ERROR_LOG_FILE.startswith('/'):		
+				ERROR_LOG_FILE = LOG_DIR + '/' + ERROR_LOG_FILE
+			else:
+				ERROR_LOG_FILE = LOG_DIR + ERROR_LOG_FILE			
+				
 		if not DEBUG_LOG_FILE:
 			DEBUG_LOG_FILE = LOG_DIR + '/debug.log'
+		else:
+			if not DEBUG_LOG_FILE.startswith('/'):		
+				DEBUG_LOG_FILE = LOG_DIR + '/' + DEBUG_LOG_FILE
+			else:
+				DEBUG_LOG_FILE = LOG_DIR + DEBUG_LOG_FILE			
 
 		self.LOG_DIR = LOG_DIR
 		self.INFO_LOG_FILE = INFO_LOG_FILE
