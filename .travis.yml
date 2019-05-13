@@ -6,6 +6,7 @@ python:
   
 os:
   - linux
+  - osx
   
 install:
   - pip install --upgrade pip
@@ -13,3 +14,5 @@ install:
 
 script:
   - python -m unittest -v test_makelog
+  - pip install coverage
+  - coverage run test_makelog.py
