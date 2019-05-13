@@ -4,6 +4,8 @@ python:
   - "3.5"
   - "3.4"
   
+osx_image: xcode10.2
+
 os:
   - linux
   - osx
