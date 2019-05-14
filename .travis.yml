@@ -13,9 +13,12 @@ install:
   - pip install --upgrade pip
   - pip install MakeLog
   - pip install coveralls
+  - pip install coverage
+  - pip install nose
 
 script:
   - python -m unittest -v test_makelog
   - coverage run test_makelog.py
   - coveralls
-
+after success:
+  - coveralls
