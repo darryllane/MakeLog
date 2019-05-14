@@ -1,5 +1,5 @@
 # **MakeLog**
-![GitHub issues](https://img.shields.io/github/issues/darryllane/MakeLog.svg)
+![GitHub issues](https://img.shields.io/github/issues/darryllane/MakeLog.svg) ![PyPI - Downloads](https://img.shields.io/pypi/dd/MakeLog.svg)
 
 
 **Essentials**
