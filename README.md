@@ -35,5 +35,3 @@ Simple logger for info, error and debug logs.
 Takes Log directory input (not required)
 
 Takes log filename inputs (not required)
-
- data.txt
