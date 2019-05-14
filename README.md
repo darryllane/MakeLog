@@ -10,7 +10,7 @@ Simple logger for info, error and debug logs.
 
 **Testing**
 ---
-[![Coverage Status](https://coveralls.io/repos/github/z4r/python-coveralls/badge.svg?branch=master)](https://coveralls.io/github/z4r/python-coveralls?branch=master) [![Build Status](https://travis-ci.org/darryllane/MakeLog.svg?branch=master)](https://travis-ci.org/darryllane/MakeLog)
+[![Coverage Status](https://coveralls.io/repos/github/darryllane/MakeLog/badge.svg?branch=master)](https://coveralls.io/github/darryllane/MakeLog?branch=master) [![Build Status](https://travis-ci.org/darryllane/MakeLog.svg?branch=master)](https://travis-ci.org/darryllane/MakeLog)
 
 **Example**
 ---
@@ -35,3 +35,5 @@ Simple logger for info, error and debug logs.
 Takes Log directory input (not required)
 
 Takes log filename inputs (not required)
+
+ data.txt
