@@ -4,18 +4,10 @@ python:
   - "3.5"
   - "3.4"
   
-osx_image: xcode10.2
 
 os:
   - linux
-  - osx
 
-
-before_install:
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then xcode-select --install; fi
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; fi
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew doctor; fi
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install python3; fi
 
 install:
   - pip install --upgrade pip
