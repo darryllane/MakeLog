@@ -57,8 +57,8 @@ class TestMakeLog(unittest.TestCase):
 
 	def test_error_custom(self):
 		print('\n\nTesting custom error log write')
-		logger = log.initialise(LOG_DIR='~/custom_log/', ERROR_LOG_FILE = 'error_log.log')
-		logger.error('error_test')
+		logger = log.initialise(LOG_DIR='~/custom_log/', ERROR_LOG_FILE = 'error_log.log', IDENTIFIER='1')
+		logger.error('error_test: IDENTIFIER: {}'.format(logger.IDENTIFIER))
 		with warnings.catch_warnings():
 			warnings.simplefilter("ignore")		
 			self.error = self.read(logger.ERROR_LOG_FILE)
@@ -67,8 +67,8 @@ class TestMakeLog(unittest.TestCase):
 
 	def test_info_custom(self):
 		print('\n\nTesting custom info log write')
-		logger = log.initialise(LOG_DIR='~/custom_log/', INFO_LOG_FILE = 'information_log.log')
-		logger.info('info_test')
+		logger = log.initialise(LOG_DIR='~/custom_log/', INFO_LOG_FILE = 'information_log.log', IDENTIFIER='info')
+		logger.info('info_test: IDENTIFIER: {}'.format(logger.IDENTIFIER))
 		with warnings.catch_warnings():
 			warnings.simplefilter("ignore")		
 			self.info = self.read(logger.INFO_LOG_FILE)		
@@ -77,8 +77,8 @@ class TestMakeLog(unittest.TestCase):
 
 	def test_debug_custom(self):
 		print('\n\nTesting custom debug log write')
-		logger = log.initialise(LOG_DIR='~/custom_log/', DEBUG_LOG_FILE = 'debug_log.log')
-		logger.debug('debug_test')
+		logger = log.initialise(LOG_DIR='~/custom_log/', DEBUG_LOG_FILE = 'debug_log.log', IDENTIFIER='2')
+		logger.debug('debug_test: IDENTIFIER: {}'.format(logger.IDENTIFIER))
 		with warnings.catch_warnings():
 			warnings.simplefilter("ignore")		
 			self.debug = self.read(logger.DEBUG_LOG_FILE)
@@ -88,8 +88,8 @@ class TestMakeLog(unittest.TestCase):
 	
 	def test_error_custom2(self):
 		print('\n\nTesting custom error log with prefixed /')
-		logger = log.initialise(LOG_DIR='~/custom_log/', ERROR_LOG_FILE = '/error_log2.log')
-		logger.error('error_test')
+		logger = log.initialise(LOG_DIR='~/custom_log/', ERROR_LOG_FILE = '/error_log2.log', IDENTIFIER='error')
+		logger.error('error_test: IDENTIFIER: {}'.format(logger.IDENTIFIER))
 		with warnings.catch_warnings():
 			warnings.simplefilter("ignore")		
 			self.error = self.read(logger.ERROR_LOG_FILE)

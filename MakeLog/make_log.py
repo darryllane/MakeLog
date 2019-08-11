@@ -8,7 +8,7 @@ Logger Class for info, error and debug
 
     """	
 	
-	def __init__(self, LOG_DIR='', INFO_LOG_FILE='', ERROR_LOG_FILE='', DEBUG_LOG_FILE='', IDENTIFIER=0):
+	def __init__(self, LOG_DIR='', INFO_LOG_FILE='', ERROR_LOG_FILE='', DEBUG_LOG_FILE='', IDENTIFIER=''):
 		"""
 **defaults**
 
@@ -59,7 +59,8 @@ DEBUG_LOG_FILE = 'debug_log.log'
 				DEBUG_LOG_FILE = LOG_DIR + '/' + DEBUG_LOG_FILE
 			else:
 				DEBUG_LOG_FILE = LOG_DIR + DEBUG_LOG_FILE			
-
+		
+		self.IDENTIFIER = IDENTIFIER		
 		self.LOG_DIR = LOG_DIR
 		self.INFO_LOG_FILE = INFO_LOG_FILE
 		self.ERROR_LOG_FILE = ERROR_LOG_FILE
