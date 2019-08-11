@@ -8,6 +8,11 @@
 ---
 Simple logger for info, error and debug logs.
 
+The logger can take an identifier, this allows for creating individual logs for threaded processes.
+You can pass the `IDENTIFIER` value (any `string`) in the initialsing call.
+
+Please take a look at the test script for examples of all features.
+
 **Testing**
 ---
 [![Coverage Status](https://coveralls.io/repos/github/darryllane/MakeLog/badge.svg?branch=master)](https://coveralls.io/github/darryllane/MakeLog?branch=master) [![Build Status](https://travis-ci.org/darryllane/MakeLog.svg?branch=master)](https://travis-ci.org/darryllane/MakeLog)
@@ -32,6 +37,8 @@ Simple logger for info, error and debug logs.
 
 **Features**
 ---
-Takes Log directory input (not required)
+Takes log directory input (not required)
 
 Takes log filename inputs (not required)
+
+Takes a logger identifier value (not required)
