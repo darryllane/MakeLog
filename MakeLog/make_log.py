@@ -8,7 +8,7 @@ Logger Class for info, error and debug
 
     """	
 	
-	def __init__(self, LOG_DIR='', INFO_LOG_FILE='', ERROR_LOG_FILE='', DEBUG_LOG_FILE=''):
+	def __init__(self, LOG_DIR='', INFO_LOG_FILE='', ERROR_LOG_FILE='', DEBUG_LOG_FILE='', IDENTIFIER=0):
 		"""
 **defaults**
 
@@ -96,9 +96,14 @@ DEBUG_LOG_FILE = 'debug_log.log'
 		
 		
 		# create Logger object
-		myloggerINFO = logging.getLogger('MyLogger1')
-		myloggerERROR = logging.getLogger('MyLogger2')
-		myloggerDEBUG = logging.getLogger('MyLogger3')
+		if IDENTIFIER:
+			myloggerINFO = logging.getLogger('MyLogger-1-{}'.format(IDENTIFIER))
+			myloggerERROR = logging.getLogger('MyLogger-2-{}'.format(IDENTIFIER))
+			myloggerDEBUG = logging.getLogger('MyLogger-3-{}'.format(IDENTIFIER))
+		else:
+			myloggerINFO = logging.getLogger('MyLogger-1')
+			myloggerERROR = logging.getLogger('MyLogger-2')
+			myloggerDEBUG = logging.getLogger('MyLogger-3')			
 		
 		# create levels
 		myloggerINFO.setLevel(logging.INFO)
